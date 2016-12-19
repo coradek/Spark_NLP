@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+*.pyc
+
+nick_spark_nlp/
+sydney_spark_nlp/
