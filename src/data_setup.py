@@ -1,4 +1,5 @@
-from os import listdir
+import os
+import json
 
 def _paragraphs(book):
     # return list of paragraphs
@@ -34,7 +35,7 @@ def _sectionize(paragraph_list, min_wc=200):
     return sections
 
 
-def process_book(book, min_wc = 200):
+def _process_book(book, min_wc=200):
     # return list of dictionaries containing book title, author and a section of text
 
     result = []
@@ -49,7 +50,23 @@ def process_book(book, min_wc = 200):
         ddd = {}
         ddd['author'] = author
         ddd['title'] = title
-        ddd['text_blob'] = sec
+        ddd['excerpt'] = sec
         result.append(ddd)
 
     return result
+
+
+def process_all(directory, min_wc=200):
+
+    all_sections = []
+
+    for book in os.listdir(directory):
+        path = os.path.join(directory, book)
+        all_sections.extend(_process_book(path, min_wc=min_wc))
+
+    with open('data/data.json', 'w') as outfile:
+        json.dump(all_sections, outfile)
+
+
+if __name__ == '__main__':
+    process_all('data/books', min_wc=200)
