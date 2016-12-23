@@ -1,5 +1,7 @@
 .ipynb_checkpoints/
 *.pyc
 
+data/data.json
+
 nick_spark_nlp/
 sydney_spark_nlp/
