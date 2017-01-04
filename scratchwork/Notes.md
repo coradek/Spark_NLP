@@ -10,12 +10,18 @@
 
 * Search github for further Spark 2.0/Python examples
 
+* [Spark MLlib docs](https://spark.apache.org/docs/2.0.2/ml-features.html)
+
+* [Spark SQL keywords]( https://docs.datastax.com/en/datastax_enterprise/4.6/datastax_enterprise/spark/sparkSqlSupportedSyntax.html#sparkSqlSupportedSyntax__synopsis-legend)
+
+
 
 <br>
 ## __Running Questions:__
 
 It seems only one notebook can run at a time . . .
-* ? Is it necessary to restart the jupyter with spark to run another notebook?
+running spark.read.json(data) a second time (often/always?) causes an error
+* ? Is it necessary to restart jupyter/spark to run another notebook?
 
 Should CountVectorizer be run on the whole dataset all at once,
 or separately on the test and training set?

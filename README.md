@@ -11,6 +11,7 @@ This Project Requires:
 *  numpy
 *  pandas
 *  matplotlib
+*  wordcloud (pip install - conda caused errors)
 
 <br>
 ## __To follow along with this exploration:__
