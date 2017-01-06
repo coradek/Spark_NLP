@@ -92,7 +92,7 @@ def tfidf(df):
     return df
 
 
-def process_data(data_file, save_loc="data/sparkDF"):
+def process_data(data_file, save_loc=None):
 
     df = spark.read.json(data_file)
     print "\nJSON successfully read into Spark."
@@ -101,9 +101,12 @@ def process_data(data_file, save_loc="data/sparkDF"):
     df = tfidf(df)
     print "\ntfidf (and intermediate columns) added."
 
-    if save
+    if save_loc is not None:
+        sqldf.write.save('data/' + save_loc, format="parquet")
+    else:
+        return df
 
 
 if __name__ == '__main__':
 
-    process_data(argv[1])
+    process_data(argv[1], save_loc="excerpt_df")

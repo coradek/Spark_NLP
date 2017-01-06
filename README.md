@@ -19,7 +19,7 @@ This Project Requires:
 `$ cd Spark_NLP`
 
 * (if you have not already configured Jupyter Notebook to run with Spark) Launch Jupyter Notebook via the script:
-`launchjupyter.sh`
+`sparkjupyter.sh`
 
 * run the data_setup python script:
 `$ python src/data_setup.py`

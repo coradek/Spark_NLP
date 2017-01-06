@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# setup spark/python to run in jupyter notebook
-# - (Galvanize Data Science Immersive 2016)
+# setup spark/pyspark to run in jupyter notebook
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=True --NotebookApp.ip='localhost' --NotebookApp.port=8888"
 

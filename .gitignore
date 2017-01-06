@@ -3,8 +3,8 @@
 derby.log
 metastore_db/
 
-data/data.json
-data/save_test.parquet/
+data/
+!data/books
 
 nick_sparknlp/
 sydney_sparknlp/
