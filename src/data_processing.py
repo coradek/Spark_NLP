@@ -99,7 +99,7 @@ def process_data(data_file, save_loc=None):
     df = excerpt_metadata(df)
     print "\nMetadata added."
     df = tfidf(df)
-    print "\ntfidf (and intermediate columns) added."
+    print "\nTFIDF (and intermediate columns) added."
 
     if save_loc is not None:
         sqldf.write.save('data/' + save_loc, format="parquet")
