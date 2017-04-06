@@ -8,6 +8,19 @@ The project takes twenty novels from Project Gutenberg, divided into excerpts an
 
 ![wordcloud][wordcloud]
 
+
+NOTE: use py35 environment
+
+mac os create python 3.5 env
+`conda create --name py35 python=3.5 anaconda`
+change 3.5 kernel name to avoid conflict with pre-existing python 3.6 env in jupyter notebook
+`python -m ipykernel install --name py35 --display-name py35`
+
+(until Spark 2.2 arrives and fixes spark2.1/python3.6 compatability issues)
+- `source activate py35`
+- in jupyter notebook manually change kernel to py35
+
+
 <br>
 ### _Dependencies:_
 This Project Requires:
@@ -53,7 +66,7 @@ raw text: leave in punctuation and stopwords
 - determine whether differing use of these elements improves classification outcome
 
 No Punctuation or Stopwords:
-- for comparrison with above
+- for comparison with above
 
 Punctuation but no stopwords?
 Stopwords but no punctuation?

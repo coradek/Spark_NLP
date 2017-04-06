@@ -5,7 +5,7 @@ def _paragraphs(book):
     # return list of paragraphs
     with open(book, 'r') as f:
         text = f.read()
-        paras = text.split('\r\n\r\n') # list of paragraphs
+        paras = text.split('\n\n') # list of paragraphs
 
         # remove extra new lines
         for i, para in enumerate(paras):
