@@ -30,6 +30,11 @@ This Project Requires:
 *  pandas
 *  matplotlib
 *  wordcloud (pip install - conda caused errors)
+*  spacy
+  `conda install spacy`
+  `python -m spacy.en.download`
+  `conda config --add channels conda-forge`
+  `conda install spacy`
 
 <br>
 ### __To follow along with this exploration:__
