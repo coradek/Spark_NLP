@@ -9,26 +9,27 @@ The project takes twenty novels from Project Gutenberg, divided into excerpts an
 ![wordcloud][wordcloud]
 
 
-NOTE: use py35 environment
+## _NOTE: create and use a python 3.5 (py35) environment for this project_
 
-mac os create python 3.5 env
-`conda create --name py35 python=3.5 anaconda`
-change 3.5 kernel name to avoid conflict with pre-existing python 3.6 env in jupyter notebook
-`python -m ipykernel install --name py35 --display-name py35`
+(until Spark 2.2 arrives, using python 3.5 "fixes" spark2.1/python3.6 compatability issues)
 
-(until Spark 2.2 arrives and fixes spark2.1/python3.6 compatability issues)
-- `source activate py35`
-- in jupyter notebook manually change kernel to py35
+- create python 3.5 env named py35
+  `conda create --name py35 python=3.5 anaconda`
+
+- change 3.5 kernel name to avoid conflict with pre-existing python 3.6 env in jupyter notebook
+  `python -m ipykernel install --name py35 --display-name py35`
+
+- activate the py35 environment
+  `source activate py35`
+
+- in jupyter notebook you may need to manually change the kernel to py35
 
 
 <br>
 ### _Dependencies:_
-This Project Requires:
+This Project Uses:
+*  anaconda
 *  pyspark
-*  jupyter notebook
-*  numpy
-*  pandas
-*  matplotlib
 *  wordcloud (pip install - conda caused errors)
 *  spacy
   `conda install spacy`
@@ -41,16 +42,19 @@ This Project Requires:
 * Navigate to this repository's main directory:
 `$ cd Spark_NLP`
 
+* Use a python 3.5 env
+  `source activate py35`
+
 * Launch Jupyter Notebook via the script:
   (You will need to configure Jupyter Notebook to run with Spark)
-`sparkjupyter.sh`
+  `sparkjupyter3.sh`
 
 * run the data_setup python script:
   `$ python src/data_setup.py`
-  * (Alternatively - run all cells in the 'CreateData' Jupyter Notebook)
+  * (Alternatively - run all cells in the 'create_data.ipynb' Jupyter Notebook)
+
 
 <br>
-
 ## Construction Zone:
 #### WARNING: Everything below here is essentially stream of consciousness
 
