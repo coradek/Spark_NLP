@@ -8,7 +8,7 @@
 * [Nick's version](https://github.com/nickbuker/spark_nlp) of this project
 * [Sydney's version](https://github.com/SydneyLauren/author-recognition) of this project
 
-* Search github for further Spark 2.0/Python examples
+* Search github for further Spark 2/Python examples
 
 * [Spark MLlib docs](https://spark.apache.org/docs/2.0.2/ml-features.html)
 

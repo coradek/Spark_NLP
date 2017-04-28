@@ -46,11 +46,12 @@ def _process_book(book, min_wc=200):
     paragraphs = _paragraphs(book)
     sections = _sectionize(paragraphs, min_wc=min_wc)
 
-    for sec in sections:
+    for i, sec in enumerate(sections):
         ddd = {}
         ddd['author'] = author
         ddd['title'] = title
         ddd['excerpt'] = sec
+        ddd['excerpt_number'] = i
         result.append(ddd)
 
     return result
@@ -64,7 +65,7 @@ def process_all(directory, min_wc=200):
         path = os.path.join(directory, book)
         all_sections.extend(_process_book(path, min_wc=min_wc))
 
-    with open('data/data.json', 'w') as outfile:
+    with open('data/excerpts.json', 'w') as outfile:
         json.dump(all_sections, outfile)
 
 
