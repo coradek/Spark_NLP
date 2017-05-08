@@ -27,20 +27,22 @@ The project takes twenty novels from Project Gutenberg, divided into excerpts an
 
 
 ### _Dependencies:_
+
 This Project Uses:
+
 *  anaconda
 *  (pyspark)
 *  wordcloud
 
-  `conda install -c https://conda.anaconda.org/amueller wordcloud`
+    `conda install -c https://conda.anaconda.org/amueller wordcloud`
 
 *  spacy
 
-  `conda config --add channels conda-forge`
+    `conda config --add channels conda-forge`
 
-  `conda install spacy`
+    `conda install spacy`
 
-  `python -m spacy.en.download`
+    `python -m spacy.en.download`
 
 
 ### __To follow along with this exploration:__
